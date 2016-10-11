@@ -1,0 +1,9 @@
+RewriteEngine On
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME}.php -f 
+RewriteRule ^(.*)$ $1.php [L] 
+
+RewriteRule ^new/([^/]*)$ /accueil/voir.php?new=$1 [L]
+RewriteRule ^profil/([^/]*)$ /user/membre.php?profil=$1 [L]
+RewriteRule ^items/([^_]*)$ /boutique/index.php?items=$1 [L]
+RewriteRule ^pages/([^/]*)$ /page/index.php?titre=$1 [L]
